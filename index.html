@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrandFrostAuto — GTA VI × Cyberleek Leak Archive</title>
+<meta name="description" content="Community hub: GTA 6 Cyberleek leak — Xbox build 1.0.2.1 EXE + 209GB torrent, official hashes, and how to not get malware.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0b1f; --bg2:#151033; --card:#1a1440; --card2:#221a52;
+    --pink:#ff3e8a; --orange:#ff9a3d; --purple:#8a3ffc; --teal:#35e0c8;
+    --txt:#efeaff; --dim:#a99fd0; --line:rgba(255,62,138,.25);
+    --grad:linear-gradient(135deg,var(--pink),var(--orange));
+    --sunset:linear-gradient(180deg,#3a1c71 0%,#d76d77 55%,#ffaf7b 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,.bigvi{font-family:'Anton',Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;text-align:center;padding:90px 20px 70px;overflow:hidden}
+  .hero::before{content:'';position:absolute;inset:0;background:var(--sunset);opacity:.22;z-index:0}
+  .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:180px;
+    background:linear-gradient(180deg,transparent,var(--bg));z-index:1}
+  .hero>*{position:relative;z-index:2}
+  .kicker{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.28em;color:#ffd9ea;
+    border:1px solid var(--line);border-radius:999px;padding:6px 18px;margin-bottom:22px;
+    background:rgba(58,28,113,.35);text-transform:uppercase}
+  .bigvi{font-size:clamp(120px,26vw,240px);line-height:.9;
+    background:linear-gradient(180deg,#ffd166 0%,var(--orange) 35%,var(--pink) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 28px rgba(255,62,138,.45));user-select:none}
+  .hero h1{font-size:clamp(1.5rem,4.5vw,2.6rem);margin-top:-8px;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.sub{max-width:640px;margin:18px auto 0;color:var(--dim);font-size:1.02rem}
+  .released{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-weight:800;
+    color:#0e0b1f;background:var(--teal);padding:10px 22px;border-radius:12px;font-size:.95rem;
+    box-shadow:0 0 24px rgba(53,224,200,.4)}
+  .dotpulse{width:10px;height:10px;border-radius:50%;background:#0e0b1f;animation:pulse 1.4s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+  /* palm silhouettes */
+  .palm{position:absolute;bottom:0;z-index:1;opacity:.5;pointer-events:none}
+  .palm.left{left:-30px}.palm.right{right:-30px;transform:scaleX(-1)}
+
+  /* ===== LAYOUT ===== */
+  main{max-width:980px;margin:0 auto;padding:0 20px 80px}
+  section{margin-top:64px}
+  h2.sec{font-size:clamp(1.5rem,3.5vw,2.2rem);margin-bottom:8px;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sec-sub{color:var(--dim);margin-bottom:26px;font-size:.98rem}
+
+  /* ===== DOWNLOAD CARDS ===== */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:28px 26px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(255,62,138,.18)}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+  .card .tag{font-size:.72rem;font-weight:800;letter-spacing:.2em;color:var(--teal);text-transform:uppercase}
+  .card h3{font-size:1.45rem;margin:8px 0 6px;color:#fff}
+  .card p{color:var(--dim);font-size:.92rem;margin-bottom:18px}
+  .btn{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:1.02rem;
+    padding:14px 18px;border-radius:12px;transition:filter .15s}
+  .btn.primary{background:var(--grad);color:#16062e;box-shadow:0 6px 22px rgba(255,62,138,.35)}
+  .btn.primary:hover{filter:brightness(1.12)}
+  .btn.ghost{border:1.5px solid var(--purple);color:#cbb8ff;margin-top:10px}
+  .btn.ghost:hover{background:rgba(138,63,252,.12)}
+  .sizetag{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.08);
+    border-radius:8px;padding:4px 10px;font-size:.75rem;font-weight:700;color:#ffd9ea}
+
+  /* ===== VERIFY ===== */
+  .vbox{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+  .hashrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
+  .hashlbl{min-width:130px;font-weight:800;font-size:.82rem;color:var(--orange);text-transform:uppercase;letter-spacing:.06em}
+  code.hash{flex:1;min-width:260px;background:#0b0818;border:1px solid #2c2455;border-radius:10px;
+    padding:10px 12px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.8rem;
+    color:var(--teal);word-break:break-all}
+  .copy{cursor:pointer;background:var(--purple);border:none;color:#fff;font-weight:800;
+    border-radius:10px;padding:10px 16px;font-size:.8rem;transition:filter .15s}
+  .copy:hover{filter:brightness(1.2)}
+  .pw{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .pw code{background:#0b0818;border:1px dashed var(--pink);border-radius:10px;padding:10px 16px;
+    font-family:ui-monospace,Menlo,monospace;color:#ffd9ea;letter-spacing:.12em;font-weight:700}
+  .cmd{margin-top:18px;background:#0b0818;border-left:3px solid var(--teal);border-radius:0 10px 10px 0;
+    padding:12px 16px;font-family:ui-monospace,Menlo,monospace;font-size:.85rem;color:#cbb8ff;overflow-x:auto}
+  .warn{margin-top:22px;border:1px solid rgba(255,154,61,.4);background:rgba(255,154,61,.07);
+    border-radius:12px;padding:16px 18px;font-size:.92rem;color:#ffcf9e}
+  .warn b{color:var(--orange)}
+
+  /* ===== FAQ ===== */
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    margin-bottom:12px;overflow:hidden}
+  summary{cursor:pointer;padding:18px 22px;font-weight:800;color:#fff;list-style:none;
+    display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';font-size:1.4rem;color:var(--pink);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .body{padding:0 22px 20px;color:var(--dim);font-size:.95rem}
+  details .body b{color:#ffd9ea}
+
+  /* ===== TIMELINE ===== */
+  .tl{border-left:3px solid var(--purple);margin-left:8px;padding-left:26px}
+  .tl-item{position:relative;margin-bottom:26px}
+  .tl-item::before{content:'';position:absolute;left:-34.5px;top:6px;width:14px;height:14px;
+    border-radius:50%;background:var(--grad);box-shadow:0 0 12px rgba(255,62,138,.6)}
+  .tl-date{font-size:.78rem;font-weight:800;letter-spacing:.15em;color:var(--teal);text-transform:uppercase}
+  .tl-item h3{font-size:1.05rem;margin:4px 0}
+  .tl-item p{color:var(--dim);font-size:.92rem}
+
+  /* ===== LINKS + FOOTER ===== */
+  .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .ext{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;text-decoration:none;transition:border-color .15s,transform .15s}
+  .ext:hover{border-color:var(--pink);transform:translateY(-2px)}
+  .ext b{color:#fff;display:block;font-size:.98rem}
+  .ext span{color:var(--dim);font-size:.82rem;word-break:break-all}
+  footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 20px 50px;text-align:center;
+    color:var(--dim);font-size:.82rem}
+  footer b{color:#ffd9ea}
+  .disc{max-width:640px;margin:10px auto 0;line-height:1.7}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="palm left" width="220" height="260" viewBox="0 0 220 260" fill="none">
+    <path d="M110 260 V120" stroke="#120d2b" stroke-width="10"/>
+    <path d="M110 130 Q60 90 15 105 Q70 70 108 112 M110 130 Q160 90 205 105 Q150 70 112 112
+             M110 118 Q80 60 40 55 Q95 45 110 105 M110 118 Q140 60 180 55 Q125 45 110 105
+             M110 112 Q110 55 90 25 Q125 50 112 105" stroke="#120d2b" stroke-width="9" fill="none" stroke-linecap="round"/>
+  </svg>
+  <svg class="palm right" width="220" height="260" viewBox="0 0 220 260" fill="none">
+    <path d="M110 260 V120" stroke="#120d2b" stroke-width="10"/>
+    <path d="M110 130 Q60 90 15 105 Q70 70 108 112 M110 130 Q160 90 205 105 Q150 70 112 112
+             M110 118 Q80 60 40 55 Q95 45 110 105 M110 118 Q140 60 180 55 Q125 45 110 105
+             M110 112 Q110 55 90 25 Q125 50 112 105" stroke="#120d2b" stroke-width="9" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="kicker">🔒 Community Leak Archive</div>
+  <div class="bigvi">VI</div>
+  <h1>Grand Theft Auto VI × Cyberleek</h1>
+  <p class="sub">The decrypted Xbox Series X build 1.0.2.1 and its missing executable — free, with the official
+     SHA-256 hashes so you don't catch infostealer from one of the 355+ fake sites.</p>
+  <div class="released"><span class="dotpulse"></span> EXE RELEASED — NOV 23, 2026 · "XMAS CAME EARLY" · ALWAYS FREE</div>
+</header>
+
+<main>
+
+  <!-- ===== DOWNLOADS ===== -->
+  <section id="downloads">
+    <h2 class="sec">⬇️ The Downloads</h2>
+    <p class="sec-sub">Everything Cyberleek released. No paywalls, no token gates — the countdown hit zero early.</p>
+    <div class="cards">
+
+      <div class="card">
+        <span class="sizetag">ZIP · small</span>
+        <div class="tag">The Missing Piece</div>
+        <h3>GTA 6 — EXE Build 1.0.2.1</h3>
+        <p>The main executable for the Xbox build, withheld on a countdown since Nov 19 and dropped free
+           on Nov 23. Xbox Series X binary — <b style="color:#ffcf9e">not</b> double-clickable on PC (see FAQ).</p>
+        <a class="btn primary" href="https://filevault.cybar.to/file/31" target="_blank" rel="noopener">🛒 Download EXE (.zip)</a>
+        <a class="btn ghost" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener">Mirror tracker (GameDrive)</a>
+      </div>
+
+      <div class="card">
+        <span class="sizetag">~209 GB · torrent</span>
+        <div class="tag">The Whole Game</div>
+        <h3>Xbox Build 1.0.2.1 — Assets</h3>
+        <p>The decrypted November 2026 Xbox Series X|S build: assets, shaders, everything — released Nov 19
+           via torrent. Add the EXE above and you have the complete build for archival/recomp.</p>
+        <a class="btn primary" href="magnet:?xt=urn:btih:465d6a0eac381e68ca77115f44f19f0c968b9590&tr=udp://open.tracker.cl:1337/announce">🧲 Magnet Link</a>
+        <a class="btn ghost" href="#verify">Verify before extracting ⚠️</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== VERIFY ===== -->
+  <section id="verify">
+    <h2 class="sec">🛡️ Verify Before You Trust</h2>
+    <p class="sec-sub">Cyberleek published official hashes because fakes are everywhere. If your file doesn't match
+       character-for-character, <b style="color:#ffcf9e">do not extract it.</b></p>
+    <div class="vbox">
+      <div class="hashrow">
+        <span class="hashlbl">ZIP SHA-256</span>
+        <code class="hash" id="h1">7545a2f7fb4b399cf8850987f087ed9a4d8499ddb6d6c2d642fd60c27f569730</code>
+        <button class="copy" onclick="cp('h1',this)">Copy</button>
+      </div>
+      <div class="hashrow">
+        <span class="hashlbl">EXE SHA-256</span>
+        <code class="hash" id="h2">e95020b2fa4a721db3df59fdecf75621730ac559d8835252f6c3b658d5a08993</code>
+        <button class="copy" onclick="cp('h2',this)">Copy</button>
+      </div>
+      <div class="pw">
+        <span class="hashlbl">Zip password</span>
+        <code id="h3">THANKYOUCYBERLEEK</code>
+        <button class="copy" onclick="cp('h3',this)">Copy</button>
+      </div>
+      <div class="cmd">macOS / Linux&nbsp;&nbsp;shasum -a 256 &lt;file.zip&gt;<br>Windows&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;certutil -hashfile &lt;file.zip&gt; SHA256</div>
+      <div class="warn">⚠️ <b>355+ fake domains</b> are pushing fake "GTA 6 PC launchers" loaded with infostealers.
+        Rockstar has shipped <b>no PC version</b> — any site offering a one-click PC play of GTA 6 right now is a trap.</div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section id="timeline">
+    <h2 class="sec">🗓️ How It Went Down</h2>
+    <p class="sec-sub">The shortest version of the messiest leak saga in gaming.</p>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">Nov 19, 2026</div>
+        <h3>GTA VI launches</h3>
+        <p>Grand Theft Auto VI releases on PS5 and Xbox Series X|S — Standard $79.99 / Ultimate $100. No PC version announced.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov 19, 2026 · later</div>
+        <h3>Cyberleek drops the build</h3>
+        <p>A decrypted ~209 GB Xbox Series X build 1.0.2.1 hits torrent networks — minus one file: the main executable, held behind a countdown and a CYBERLEEK token market-cap goal.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Nov 23, 2026 · ~20:06</div>
+        <h3>"XMAS CAME EARLY"</h3>
+        <p>The EXE drops ~3 hours ahead of the timer. "The exe is out. Always free. An early Christmas gift from CL.
+           The torch passes to the open source recomp and emulation projects. Before trusting any file, verify it."</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Now</div>
+        <h3>The recomp era</h3>
+        <p>Leonida, Xbox2Windows, AnyXboxX and other open-source projects race to get the Xbox build running on PC via static recompilation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <h2 class="sec">❓ FAQ</h2>
+    <details>
+      <summary>Can I play GTA 6 on PC with this?</summary>
+      <div class="body"><b>Not yet.</b> The EXE is an Xbox Series X binary — Windows doesn't speak its system calls.
+        Dropping it into the 209 GB asset folder does nothing. Open-source recomp projects (Leonida etc.) are working on a
+        native PC port; a working recomp is expected to need <b>350 GB+</b> of drive space. Watch gta6recomp.com for progress.</div>
+    </details>
+    <details>
+      <summary>What exactly do I get?</summary>
+      <div class="body">The ~209 GB torrent is the decrypted Xbox build's assets (Nov 2026, v1.0.2.1). The small ZIP contains
+        the main executable that was missing from it. Together: the complete console build, for archival and reverse-engineering.</div>
+    </details>
+    <details>
+      <summary>Is it safe to download?</summary>
+      <div class="body">Only if the <b>hashes match</b> — that's exactly why Cyberleek published them. Verify the ZIP SHA-256
+        before extracting, and the EXE SHA-256 after. Fake sites and Discord/Telegram "launchers" are the real danger.</div>
+    </details>
+    <details>
+      <summary>Who is Cyberleek?</summary>
+      <div class="body">An anonymous leaker who's been dribbling GTA VI material since before launch. All releases are free;
+        they take crypto donations (BTC/XMR) and shill a CYBERLEEK token. Official site: <b>cyberleek.org</b>.</div>
+    </details>
+    <details>
+      <summary>Is this "official"?</summary>
+      <div class="body">Official GTA 6 = Rockstar Games, PS5 / Xbox Series X|S only. This is a leaked console build and this
+        page is a fan-made community archive — not affiliated with Rockstar or Cyberleek.</div>
+    </details>
+  </section>
+
+  <!-- ===== LINKS ===== -->
+  <section id="links">
+    <h2 class="sec">🔗 Sources & Tracking</h2>
+    <p class="sec-sub">Where this all lives if you want to go deeper.</p>
+    <div class="linkgrid">
+      <a class="ext" href="https://cyberleek.org/" target="_blank" rel="noopener"><b>Cyberleek — official site</b><span>cyberleek.org — announcements, leeks, donations</span></a>
+      <a class="ext" href="https://gta6recomp.com/post/cyberleek-releases-gta6-xbox-exe" target="_blank" rel="noopener"><b>GTA6 Recomp — EXE drop post</b><span>official hashes + verification guide</span></a>
+      <a class="ext" href="https://gta6recomp.com/" target="_blank" rel="noopener"><b>GTA6 Recomp project</b><span>open-source PC recomp hub (Leonida etc.)</span></a>
+      <a class="ext" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener"><b>GameDrive leak tracker</b><span>mirrors, manifests, community archive</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div><b>GRANDFROSTAUTO</b> · GTA VI × Cyberleek community archive · updated Nov 23, 2026</div>
+    <p class="disc">Fan-made page for friends, not affiliated with or endorsed by Rockstar Games, Take-Two, or Cyberleek.
+       Grand Theft Auto VI © Rockstar Games. Verify every file before you run it. Stay leeky. 🥒</p>
+  </footer>
+
+</main>
+
+<script>
+function cp(id, btn){
+  const txt = document.getElementById(id).textContent.trim();
+  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject())
+    .then(()=>{ const o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(()=>btn.textContent=o,1400); })
+    .catch(()=>{ const r=document.createRange(); r.selectNode(document.getElementById(id));
+      getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy');
+      const o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(()=>btn.textContent=o,1400); });
+}
+</script>
+</body>
+</html>
