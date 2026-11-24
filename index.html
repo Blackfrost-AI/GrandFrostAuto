@@ -4,22 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GrandFrostAuto — Grand Theft Auto VI · Launch Hub &amp; Community Archive</title>
-<meta name="description" content="Grand Theft Auto VI — out now on PS5 &amp; Xbox Series X|S. Launch info, editions, and the Cyberleek community leak archive with official SHA-256 hashes.">
+<meta name="description" content="Grand Theft Auto VI — out now on PS5 &amp; Xbox Series X|S. Launch info, editions, and the Cyberleek community leak archive with Cyberleek's published SHA-256 hashes. Fan-made, not official.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GrandFrostAuto">
 <meta property="og:title" content="GrandFrostAuto — GTA VI Launch Hub &amp; Cyberleek Archive">
 <meta property="og:description" content="Out now on PS5 &amp; Xbox Series X|S · $79.99. Plus: the free Cyberleek Xbox build EXE + 209GB torrent, official hashes included.">
 <meta property="og:url" content="https://blackfrost-ai.github.io/GrandFrostAuto/">
-<meta property="og:image" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png?v=2">
-<meta property="og:image:secure_url" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png?v=2">
+<meta property="og:image" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png?v=3">
+<meta property="og:image:secure_url" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png?v=3">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Grand Theft Auto VI wordmark over a Vice City sunset with palm trees — out now on PS5 and Xbox Series X|S">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GrandFrostAuto — GTA VI Launch Hub &amp; Cyberleek Archive">
-<meta name="twitter:description" content="GTA VI is out. Launch info + the free Cyberleek leak archive with official SHA-256 verification.">
-<meta name="twitter:image" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png?v=2">
+<meta name="twitter:description" content="GTA VI is out. Launch info + the free Cyberleek leak archive with Cyberleek's published SHA-256 verification. Fan-made, not official.">
+<meta name="twitter:image" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png?v=3">
 <meta name="twitter:image:alt" content="Grand Theft Auto VI wordmark over a Vice City sunset with palm trees — out now on PS5 and Xbox Series X|S">
 <meta name="theme-color" content="#120821">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
@@ -34,7 +34,7 @@
     --grad:linear-gradient(100deg,#ffd98a 0%,#ff8e6b 45%,#ff4d8d 100%);
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
   body{background:var(--ink);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.65}
   h1,h2,h3,.anton{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;font-weight:400}
   a{color:var(--gold)}
@@ -42,7 +42,7 @@
 
   /* nav */
   nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
-    padding:14px 26px;background:linear-gradient(180deg,rgba(13,7,22,.92),rgba(13,7,22,.75) 70%,transparent);backdrop-filter:blur(10px)}
+    padding:14px 26px;background:linear-gradient(180deg,rgba(13,7,22,.92),rgba(13,7,22,.75) 70%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
   .brand{font-family:'Anton';font-size:1.15rem;letter-spacing:.06em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:9px}
   .brand i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   nav .links{display:flex;gap:22px}
@@ -55,6 +55,7 @@
     .wordmark .six{font-size:clamp(5rem,26vw,7rem)}
     .herocta{gap:10px}
     .btn{padding:12px 22px;font-size:.88rem}
+    .cards .sizetag{position:static;display:inline-block;margin:0 0 10px}
   }
 
   /* hero */
@@ -62,13 +63,14 @@
     text-align:center;padding:120px 20px 80px;overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0;background:url('hero.svg') center/cover no-repeat}
   .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:220px;background:linear-gradient(180deg,transparent,var(--ink));z-index:1}
-  .hero>*:not(.hero-bg){position:relative;z-index:2}
+  .hero>*:not(.hero-bg):not(.scroll-hint){position:relative;z-index:2}
   .outnow{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,217,138,.5);color:var(--gold);
-    background:rgba(13,7,22,.55);backdrop-filter:blur(6px);border-radius:999px;padding:7px 20px;
+    background:rgba(13,7,22,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:999px;padding:7px 20px;
     font-size:.78rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;margin-bottom:30px}
   .outnow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 1.6s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   .wordmark{line-height:.92;user-select:none;filter:drop-shadow(0 6px 34px rgba(13,7,22,.8))}
+  .wordmark span{display:block}
   .wordmark .gta{font-family:'Anton';font-size:clamp(2.1rem,7vw,4.6rem);color:#fff;letter-spacing:.04em;
     text-shadow:0 3px 0 rgba(0,0,0,.35),0 0 40px rgba(255,142,107,.45)}
   .wordmark .six{font-family:'Anton';font-size:clamp(6.5rem,22vw,15rem);line-height:.88;
@@ -78,14 +80,14 @@
   .tagline{margin-top:16px;font-size:clamp(1rem,2.6vw,1.35rem);color:#ffe9f2;font-weight:600;letter-spacing:.02em;
     text-shadow:0 2px 14px rgba(13,7,22,.9)}
   .plats{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
-  .plat{background:rgba(13,7,22,.6);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:10px;
+  .plat{background:rgba(13,7,22,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:10px;
     padding:9px 20px;font-weight:800;font-size:.88rem;color:#fff}
   .plat small{display:block;color:var(--dim);font-weight:600;font-size:.7rem;letter-spacing:.08em}
   .herocta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
   .btn{display:inline-block;text-decoration:none;font-weight:800;font-size:.95rem;padding:14px 30px;border-radius:12px;letter-spacing:.03em;transition:transform .15s,filter .15s}
   .btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
   .btn.gold{background:var(--grad);color:#2b0f22;box-shadow:0 8px 30px rgba(255,77,141,.35)}
-  .btn.line{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:rgba(13,7,22,.45);backdrop-filter:blur(6px)}
+  .btn.line{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:rgba(13,7,22,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
   .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:var(--dim);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase}
 
   /* sections */
@@ -97,7 +99,7 @@
   .sec-sub{color:var(--dim);max-width:700px;margin-bottom:34px;font-size:.98rem}
 
   /* editions */
-  .editions{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .editions{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:22px}
   .ed{position:relative;background:linear-gradient(180deg,var(--panel),var(--ink2));border:1px solid var(--line);border-radius:18px;padding:30px 28px;overflow:hidden}
   .ed::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
   .ed.ult{border-color:rgba(255,217,138,.4);box-shadow:0 10px 44px rgba(255,142,107,.14)}
@@ -112,7 +114,7 @@
   .note{margin-top:22px;color:var(--dim);font-size:.85rem}
 
   /* world strip */
-  .world{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .world{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:18px}
   .wcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
   .wcard .big{font-family:'Anton';font-size:2rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .wcard h3{font-size:1rem;color:#fff;margin:6px 0 6px}
@@ -127,7 +129,7 @@
   .community-banner p b{color:#ffd9ea}
 
   /* downloads */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:30px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:22px;margin-top:30px}
   .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 26px;overflow:hidden;transition:transform .2s,box-shadow .2s}
   .card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(255,77,141,.16)}
   .card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
@@ -142,7 +144,7 @@
   .vbox{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;margin-top:30px}
   .hashrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
   .hashlbl{min-width:130px;font-weight:800;font-size:.8rem;color:var(--coral);text-transform:uppercase;letter-spacing:.06em}
-  code.hash{flex:1;min-width:260px;background:#0b0616;border:1px solid #322457;border-radius:10px;padding:10px 12px;
+  code.hash{flex:1;min-width:min(260px,100%);background:#0b0616;border:1px solid #322457;border-radius:10px;padding:10px 12px;
     font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.78rem;color:var(--teal);word-break:break-all}
   .copy{cursor:pointer;background:var(--violet);border:none;color:#fff;font-weight:800;border-radius:10px;padding:10px 16px;font-size:.78rem;transition:filter .15s}
   .copy:hover{filter:brightness(1.2)}
@@ -168,7 +170,7 @@
   details .body b{color:#ffd9ea}
 
   /* sources + footer */
-  .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px}
+  .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:16px;margin-top:26px}
   .ext{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;transition:border-color .15s,transform .15s}
   .ext:hover{border-color:var(--pink);transform:translateY(-2px)}
   .ext b{color:#fff;display:block;font-size:.95rem}
@@ -194,10 +196,10 @@
 <header class="hero" id="top">
   <div class="hero-bg" role="img" aria-label="Vice City sunset"></div>
   <div class="outnow">Out Now · November 19, 2026</div>
-  <div class="wordmark">
-    <div class="gta">Grand Theft Auto</div>
-    <div class="six">VI</div>
-  </div>
+  <h1 class="wordmark">
+    <span class="gta">Grand Theft Auto</span>
+    <span class="six">VI</span>
+  </h1>
   <p class="tagline">Welcome back to Vice City. Welcome to Leonida.</p>
   <div class="plats">
     <div class="plat">PlayStation 5<small>$79.99 STANDARD</small></div>
@@ -238,19 +240,19 @@
         <ul>
           <li><b>Full story</b> — Jason &amp; Lucia across Leonida</li>
           <li>Vice City, the Keys, the Everglades and beyond</li>
-          <li>Online component at launch</li>
           <li>PS5 / Xbox Series X|S</li>
+          <li>Upgrade to Ultimate anytime for $20</li>
         </ul>
       </div>
       <div class="ed ult">
-        <span class="flag">DELUXE</span>
+        <span class="flag">+$20 UPGRADE</span>
         <h3>Ultimate Edition</h3>
         <div class="price">$99.99 <small>USD</small></div>
         <ul>
           <li><b>Everything in Standard</b></li>
-          <li>Exclusive vehicles &amp; weapons</li>
-          <li>Additional properties &amp; businesses</li>
-          <li>Bonus story content &amp; cosmetics</li>
+          <li>Exclusive vehicles &amp; weapons — '95 Grotti Cheetah, Morgan revolvers</li>
+          <li>Ultimate-only shops, salons &amp; mod garages</li>
+          <li>Bonus jobs, apparel &amp; tattoo collections</li>
         </ul>
       </div>
     </div>
@@ -266,7 +268,7 @@
       <div class="wcard"><div class="big">VICE CITY</div><h3>The neon heart</h3><p>Beachfront excess, nightlife, and the criminal underworld that comes with both.</p></div>
       <div class="wcard"><div class="big">THE KEYS</div><h3>Island chain</h3><p>Boats, bridges and smuggling routes stretching into open water.</p></div>
       <div class="wcard"><div class="big">GRASSRIVERS</div><h3>The Everglades</h3><p>Airboats, gators, and swamp country hiding its own economy.</p></div>
-      <div class="wcard"><div class="big">2 LEADS</div><h3>Jason &amp; Lucia</h3><p>The series' first playable female protagonist — a couple pulled deeper than they planned.</p></div>
+      <div class="wcard"><div class="big">2 LEADS</div><h3>Jason &amp; Lucia</h3><p>The series' first female lead in a mainline story — a couple pulled deeper than they planned.</p></div>
     </div>
   </section>
 
@@ -276,7 +278,7 @@
     <h2>The Cyberleek Leak Archive</h2>
     <p>Everything below is the <b>community leak archive</b>: the decrypted Xbox Series X build 1.0.2.1 and its
        executable, released free by Cyberleek between Nov 19–23, 2026. Kept here for archival and the open-source
-       recomp projects — <b>with official SHA-256 hashes so you don't catch infostealer from a fake.</b></p>
+       recomp projects — <b>with Cyberleek's published SHA-256 hashes so you don't catch infostealer from a fake.</b></p>
   </div>
 
   <!-- DOWNLOADS -->
@@ -290,7 +292,7 @@
         <h3>GTA 6 — EXE Build 1.0.2.1</h3>
         <p>The main executable, withheld behind a countdown since Nov 19 and dropped free on Nov 23 —
            "XMAS CAME EARLY. Always free." Xbox Series X binary, <b style="color:#ffcf9e">not</b> double-clickable on PC.</p>
-        <a class="btn gold block" href="https://filevault.cybar.to/file/31" target="_blank" rel="noopener">⬇ Download EXE (.zip)</a>
+        <a class="btn gold block" href="https://filevault.cybar.to/file/31" target="_blank" rel="noopener noreferrer">⬇ Download EXE (.zip)</a>
         <a class="btn ghost block" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener">Mirror tracker (GameDrive)</a>
       </div>
       <div class="card">
@@ -308,7 +310,7 @@
     <div class="vbox" id="verify">
       <div class="sec-kicker">Trust Anchor</div>
       <h2 class="sec" style="font-size:1.6rem">Verify before you <em>trust</em></h2>
-      <p class="sec-sub" style="margin-bottom:8px">Cyberleek published official hashes because fakes are everywhere.
+      <p class="sec-sub" style="margin-bottom:8px">Cyberleek published the original hashes because fakes are everywhere.
          No match, character-for-character? <b style="color:#ffcf9e">Do not extract it.</b></p>
       <div class="hashrow">
         <span class="hashlbl">ZIP SHA-256</span>
@@ -349,7 +351,7 @@
       <div class="tl-item">
         <div class="tl-date">Nov 23 · ~20:06</div>
         <h3>"XMAS CAME EARLY"</h3>
-        <p>The EXE drops ~3 hours ahead of the timer, free, with official SHA-256 checksums. "The torch passes to the open source recomp and emulation projects."</p>
+        <p>The EXE drops ~3 hours ahead of the timer, free, with Cyberleek's SHA-256 checksums. "The torch passes to the open source recomp and emulation projects."</p>
       </div>
       <div class="tl-item">
         <div class="tl-date">Now</div>
@@ -400,7 +402,7 @@
     <div class="linkgrid">
       <a class="ext" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener"><b>Rockstar — official GTA VI</b><span>rockstargames.com/VI — the real launch</span></a>
       <a class="ext" href="https://cyberleek.org/" target="_blank" rel="noopener"><b>Cyberleek — official site</b><span>cyberleek.org — announcements &amp; leeks</span></a>
-      <a class="ext" href="https://gta6recomp.com/post/cyberleek-releases-gta6-xbox-exe" target="_blank" rel="noopener"><b>GTA6 Recomp — EXE drop post</b><span>official hashes + verification guide</span></a>
+      <a class="ext" href="https://gta6recomp.com/post/cyberleek-releases-gta6-xbox-exe" target="_blank" rel="noopener"><b>GTA6 Recomp — EXE drop post</b><span>Cyberleek's hashes + verification guide</span></a>
       <a class="ext" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener"><b>GameDrive leak tracker</b><span>mirrors, manifests, community archive</span></a>
     </div>
   </section>
@@ -417,11 +419,14 @@
 <script>
 function cp(id, btn){
   const txt = document.getElementById(id).textContent.trim();
-  const done = () => { const o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(()=>btn.textContent=o,1400); };
-  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(done).catch(()=>{
+  const flash = msg => { const o=btn.textContent; btn.textContent=msg; setTimeout(()=>btn.textContent=o,1400); };
+  const fallback = () => {
     const r=document.createRange(); r.selectNode(document.getElementById(id));
-    getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy'); done();
-  });
+    getSelection().removeAllRanges(); getSelection().addRange(r);
+    let ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+    flash(ok ? '✓ Copied' : 'Copy failed — select manually');
+  };
+  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(()=>flash('✓ Copied')).catch(fallback);
 }
 </script>
 </body>
