@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{width:1200px;height:630px;overflow:hidden;position:relative;font-family:'Inter',sans-serif}
-img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,7,22,.25) 0%,rgba(13,7,22,0) 30%,rgba(13,7,22,.72) 100%)}
-.center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.gta{font-family:'Anton';font-size:54px;color:#fff;letter-spacing:.05em;text-transform:uppercase;text-shadow:0 3px 0 rgba(0,0,0,.4),0 0 34px rgba(13,7,22,.9)}
-.six{font-family:'Anton';font-size:210px;line-height:.9;background:linear-gradient(180deg,#fff2cf 0%,#ffd98a 30%,#ff8e6b 62%,#ff4d8d 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 rgba(20,8,40,.6))}
-.bar{position:absolute;bottom:0;left:0;right:0;padding:18px 0 20px;background:rgba(13,7,22,.88);border-top:3px solid #ff4d8d;text-align:center}
-.bar h1{font-family:'Anton';font-size:34px;color:#fff;letter-spacing:.06em;text-transform:uppercase}
-.bar p{color:#3fe0c8;font-weight:800;font-size:16px;margin-top:2px}
-.badge{position:absolute;top:22px;left:50%;transform:translateX(-50%);border:1px solid rgba(255,217,138,.6);color:#ffd98a;background:rgba(13,7,22,.55);border-radius:999px;padding:6px 22px;font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase}
-.fan{position:absolute;top:24px;right:24px;color:rgba(255,255,255,.85);background:rgba(13,7,22,.6);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 14px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+<html><head><meta charset="UTF-8"><style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{position:relative;font-family:'Avenir Next','Segoe UI',system-ui,sans-serif;background:#0d0716}
+  .bg{position:absolute;inset:0;background:url('hero.svg') center/cover no-repeat}
+  .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,7,22,.55),rgba(13,7,22,.45) 45%,rgba(13,7,22,.92) 90%)}
+  .badge{position:absolute;top:22px;left:50%;transform:translateX(-50%);border:1px solid rgba(255,84,112,.6);color:#ff5470;background:rgba(13,7,22,.6);border-radius:999px;padding:6px 22px;font-size:12px;font-weight:800;letter-spacing:.3em;text-transform:uppercase}
+  .fan{position:absolute;top:24px;right:24px;color:rgba(255,255,255,.85);background:rgba(13,7,22,.6);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 14px;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+  .center{position:absolute;top:108px;left:0;right:0;text-align:center}
+  .headline{font-size:86px;font-weight:800;color:#fff;letter-spacing:-.01em;line-height:1;text-shadow:0 4px 30px rgba(13,7,22,.9)}
+  .headline .trap{background:linear-gradient(92deg,#ffd98a,#ff9a3d 45%,#ff3d81);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{margin-top:22px;font-size:26px;font-weight:700;color:#f2edfa;text-shadow:0 2px 14px rgba(13,7,22,.95)}
+  .sub b{color:#ffd98a}
+  .bar{position:absolute;left:0;right:0;bottom:0;height:118px;background:rgba(13,7,22,.94);border-top:3px solid #ff3d81;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
+  .bar h2{font-size:26px;font-weight:800;letter-spacing:.14em;color:#fff;text-transform:uppercase}
+  .bar p{font-size:15px;font-weight:700;color:#38e1c6;letter-spacing:.06em}
 </style></head><body>
-<img class="bg" src="hero.svg">
+<div class="bg"></div>
 <div class="shade"></div>
-<div class="badge">Out Now · PS5 · Xbox Series X|S</div>
+<div class="badge">Threat Report · Launch Week</div>
 <div class="fan">Fan-made · Not Official</div>
-<div class="center" style="padding-bottom:70px">
-  <div class="gta">Grand Theft Auto</div>
-  <div class="six">VI</div>
+<div class="center">
+  <div class="headline">The Piracy <span class="trap">Trap</span></div>
+  <div class="sub"><b>355+</b> fake GTA VI sites hunting for victims — verify before you run</div>
 </div>
 <div class="bar">
-  <h1>GrandFrostAuto</h1>
-  <p>Launch Hub + Cyberleek Leak Archive · Free Downloads · Published SHA-256</p>
+  <h2>GrandFrostAuto</h2>
+  <p>How piracy brings out the bad actors · Real links + hashes disclosed</p>
 </div>
 </body></html>
