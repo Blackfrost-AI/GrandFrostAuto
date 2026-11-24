@@ -3,187 +3,309 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GrandFrostAuto — GTA VI × Cyberleek Leak Archive</title>
-<meta name="description" content="Community hub: GTA 6 Cyberleek leak — Xbox build 1.0.2.1 EXE + 209GB torrent, official hashes, and how to not get malware.">
+<title>GrandFrostAuto — Grand Theft Auto VI · Launch Hub &amp; Community Archive</title>
+<meta name="description" content="Grand Theft Auto VI — out now on PS5 &amp; Xbox Series X|S. Launch info, editions, and the Cyberleek community leak archive with official SHA-256 hashes.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GrandFrostAuto">
+<meta property="og:title" content="GrandFrostAuto — GTA VI Launch Hub &amp; Cyberleek Archive">
+<meta property="og:description" content="Out now on PS5 &amp; Xbox Series X|S · $79.99. Plus: the free Cyberleek Xbox build EXE + 209GB torrent, official hashes included.">
+<meta property="og:url" content="https://blackfrost-ai.github.io/GrandFrostAuto/">
+<meta property="og:image" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GrandFrostAuto — GTA VI Launch Hub &amp; Cyberleek Archive">
+<meta name="twitter:description" content="GTA VI is out. Launch info + the free Cyberleek leak archive with official SHA-256 verification.">
+<meta name="twitter:image" content="https://blackfrost-ai.github.io/GrandFrostAuto/og-card.png">
+<meta name="theme-color" content="#120821">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0e0b1f; --bg2:#151033; --card:#1a1440; --card2:#221a52;
-    --pink:#ff3e8a; --orange:#ff9a3d; --purple:#8a3ffc; --teal:#35e0c8;
-    --txt:#efeaff; --dim:#a99fd0; --line:rgba(255,62,138,.25);
-    --grad:linear-gradient(135deg,var(--pink),var(--orange));
-    --sunset:linear-gradient(180deg,#3a1c71 0%,#d76d77 55%,#ffaf7b 100%);
+    --ink:#0d0716; --ink2:#160b2a; --panel:#1c1136; --panel2:#241745;
+    --pink:#ff4d8d; --coral:#ff8e6b; --gold:#ffd98a; --teal:#3fe0c8; --violet:#9a6bff;
+    --txt:#f4eeff; --dim:#b3a8d6; --line:rgba(255,255,255,.09);
+    --grad:linear-gradient(100deg,#ffd98a 0%,#ff8e6b 45%,#ff4d8d 100%);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-  h1,h2,h3,.bigvi{font-family:'Anton',Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase}
+  body{background:var(--ink);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.65}
+  h1,h2,h3,.anton{font-family:'Anton',Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;font-weight:400}
+  a{color:var(--gold)}
+  img,svg{max-width:100%}
 
-  /* ===== HERO ===== */
-  .hero{position:relative;text-align:center;padding:90px 20px 70px;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:var(--sunset);opacity:.22;z-index:0}
-  .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:180px;
-    background:linear-gradient(180deg,transparent,var(--bg));z-index:1}
-  .hero>*{position:relative;z-index:2}
-  .kicker{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.28em;color:#ffd9ea;
-    border:1px solid var(--line);border-radius:999px;padding:6px 18px;margin-bottom:22px;
-    background:rgba(58,28,113,.35);text-transform:uppercase}
-  .bigvi{font-size:clamp(120px,26vw,240px);line-height:.9;
-    background:linear-gradient(180deg,#ffd166 0%,var(--orange) 35%,var(--pink) 100%);
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:14px 26px;background:linear-gradient(180deg,rgba(13,7,22,.92),rgba(13,7,22,.75) 70%,transparent);backdrop-filter:blur(10px)}
+  .brand{font-family:'Anton';font-size:1.15rem;letter-spacing:.06em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:9px}
+  .brand i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav .links{display:flex;gap:22px}
+  nav .links a{color:var(--dim);text-decoration:none;font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  nav .links a:hover{color:#fff}
+  @media(max-width:760px){nav .links{display:none}}
+  @media(max-width:520px){
+    .outnow{letter-spacing:.16em;font-size:.68rem;padding:7px 14px}
+    .wordmark .gta{font-size:clamp(1.8rem,8.5vw,2.4rem)}
+    .wordmark .six{font-size:clamp(5rem,26vw,7rem)}
+    .herocta{gap:10px}
+    .btn{padding:12px 22px;font-size:.88rem}
+  }
+
+  /* hero */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;padding:120px 20px 80px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:url('hero.svg') center/cover no-repeat}
+  .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:220px;background:linear-gradient(180deg,transparent,var(--ink));z-index:1}
+  .hero>*:not(.hero-bg){position:relative;z-index:2}
+  .outnow{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,217,138,.5);color:var(--gold);
+    background:rgba(13,7,22,.55);backdrop-filter:blur(6px);border-radius:999px;padding:7px 20px;
+    font-size:.78rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;margin-bottom:30px}
+  .outnow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .wordmark{line-height:.92;user-select:none;filter:drop-shadow(0 6px 34px rgba(13,7,22,.8))}
+  .wordmark .gta{font-family:'Anton';font-size:clamp(2.1rem,7vw,4.6rem);color:#fff;letter-spacing:.04em;
+    text-shadow:0 3px 0 rgba(0,0,0,.35),0 0 40px rgba(255,142,107,.45)}
+  .wordmark .six{font-family:'Anton';font-size:clamp(6.5rem,22vw,15rem);line-height:.88;
+    background:linear-gradient(180deg,#fff2cf 0%,#ffd98a 30%,#ff8e6b 62%,#ff4d8d 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
-    filter:drop-shadow(0 0 28px rgba(255,62,138,.45));user-select:none}
-  .hero h1{font-size:clamp(1.5rem,4.5vw,2.6rem);margin-top:-8px;
-    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.sub{max-width:640px;margin:18px auto 0;color:var(--dim);font-size:1.02rem}
-  .released{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-weight:800;
-    color:#0e0b1f;background:var(--teal);padding:10px 22px;border-radius:12px;font-size:.95rem;
-    box-shadow:0 0 24px rgba(53,224,200,.4)}
-  .dotpulse{width:10px;height:10px;border-radius:50%;background:#0e0b1f;animation:pulse 1.4s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+    filter:drop-shadow(0 4px 0 rgba(20,8,40,.55))}
+  .tagline{margin-top:16px;font-size:clamp(1rem,2.6vw,1.35rem);color:#ffe9f2;font-weight:600;letter-spacing:.02em;
+    text-shadow:0 2px 14px rgba(13,7,22,.9)}
+  .plats{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+  .plat{background:rgba(13,7,22,.6);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:10px;
+    padding:9px 20px;font-weight:800;font-size:.88rem;color:#fff}
+  .plat small{display:block;color:var(--dim);font-weight:600;font-size:.7rem;letter-spacing:.08em}
+  .herocta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;font-size:.95rem;padding:14px 30px;border-radius:12px;letter-spacing:.03em;transition:transform .15s,filter .15s}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+  .btn.gold{background:var(--grad);color:#2b0f22;box-shadow:0 8px 30px rgba(255,77,141,.35)}
+  .btn.line{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:rgba(13,7,22,.45);backdrop-filter:blur(6px)}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:var(--dim);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase}
 
-  /* palm silhouettes */
-  .palm{position:absolute;bottom:0;z-index:1;opacity:.5;pointer-events:none}
-  .palm.left{left:-30px}.palm.right{right:-30px;transform:scaleX(-1)}
+  /* sections */
+  main{max-width:1080px;margin:0 auto;padding:0 22px}
+  section{padding:74px 0 10px}
+  .sec-kicker{font-size:.72rem;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+  h2.sec{font-size:clamp(1.7rem,4.5vw,2.7rem);color:#fff;margin-bottom:6px}
+  h2.sec em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sec-sub{color:var(--dim);max-width:700px;margin-bottom:34px;font-size:.98rem}
 
-  /* ===== LAYOUT ===== */
-  main{max-width:980px;margin:0 auto;padding:0 20px 80px}
-  section{margin-top:64px}
-  h2.sec{font-size:clamp(1.5rem,3.5vw,2.2rem);margin-bottom:8px;
-    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .sec-sub{color:var(--dim);margin-bottom:26px;font-size:.98rem}
+  /* editions */
+  .editions{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .ed{position:relative;background:linear-gradient(180deg,var(--panel),var(--ink2));border:1px solid var(--line);border-radius:18px;padding:30px 28px;overflow:hidden}
+  .ed::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+  .ed.ult{border-color:rgba(255,217,138,.4);box-shadow:0 10px 44px rgba(255,142,107,.14)}
+  .ed .flag{position:absolute;top:18px;right:18px;font-size:.66rem;font-weight:800;letter-spacing:.16em;color:#2b0f22;background:var(--grad);padding:4px 10px;border-radius:6px}
+  .ed h3{font-size:1.35rem;color:#fff}
+  .price{font-family:'Anton';font-size:2.6rem;margin:10px 0 2px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .price small{font-size:.9rem;color:var(--dim);-webkit-text-fill-color:var(--dim);font-family:'Inter'}
+  .ed ul{list-style:none;margin-top:16px}
+  .ed li{padding:7px 0 7px 26px;position:relative;color:var(--dim);font-size:.92rem;border-top:1px dashed rgba(255,255,255,.07)}
+  .ed li::before{content:'✦';position:absolute;left:2px;color:var(--coral)}
+  .ed li b{color:#fff}
+  .note{margin-top:22px;color:var(--dim);font-size:.85rem}
 
-  /* ===== DOWNLOAD CARDS ===== */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-  .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:28px 26px;overflow:hidden;transition:transform .2s,box-shadow .2s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(255,62,138,.18)}
+  /* world strip */
+  .world{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .wcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .wcard .big{font-family:'Anton';font-size:2rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .wcard h3{font-size:1rem;color:#fff;margin:6px 0 6px}
+  .wcard p{color:var(--dim);font-size:.88rem}
+
+  /* community divider */
+  .community-banner{margin:80px 0 0;border:1px solid rgba(154,107,255,.35);border-radius:20px;
+    background:linear-gradient(120deg,rgba(154,107,255,.14),rgba(255,77,141,.10));padding:34px 30px;text-align:center}
+  .community-banner .tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.3em;color:var(--violet);text-transform:uppercase;border:1px solid rgba(154,107,255,.5);border-radius:999px;padding:5px 16px;margin-bottom:14px}
+  .community-banner h2{font-size:clamp(1.6rem,4vw,2.4rem);color:#fff}
+  .community-banner p{color:var(--dim);max-width:680px;margin:10px auto 0;font-size:.95rem}
+  .community-banner p b{color:#ffd9ea}
+
+  /* downloads */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:30px}
+  .card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 26px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(255,77,141,.16)}
   .card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
-  .card .tag{font-size:.72rem;font-weight:800;letter-spacing:.2em;color:var(--teal);text-transform:uppercase}
-  .card h3{font-size:1.45rem;margin:8px 0 6px;color:#fff}
-  .card p{color:var(--dim);font-size:.92rem;margin-bottom:18px}
-  .btn{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:1.02rem;
-    padding:14px 18px;border-radius:12px;transition:filter .15s}
-  .btn.primary{background:var(--grad);color:#16062e;box-shadow:0 6px 22px rgba(255,62,138,.35)}
-  .btn.primary:hover{filter:brightness(1.12)}
-  .btn.ghost{border:1.5px solid var(--purple);color:#cbb8ff;margin-top:10px}
-  .btn.ghost:hover{background:rgba(138,63,252,.12)}
-  .sizetag{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.08);
-    border-radius:8px;padding:4px 10px;font-size:.75rem;font-weight:700;color:#ffd9ea}
+  .card .tag{font-size:.7rem;font-weight:800;letter-spacing:.2em;color:var(--teal);text-transform:uppercase}
+  .card h3{font-size:1.4rem;margin:8px 0 6px;color:#fff}
+  .card p{color:var(--dim);font-size:.9rem;margin-bottom:18px}
+  .btn.block{display:block;text-align:center}
+  .btn.ghost{border:1.5px solid var(--violet);color:#d9c8ff;margin-top:10px;background:transparent}
+  .sizetag{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.08);border-radius:8px;padding:4px 10px;font-size:.72rem;font-weight:700;color:#ffd9ea}
 
-  /* ===== VERIFY ===== */
-  .vbox{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+  /* verify */
+  .vbox{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;margin-top:30px}
   .hashrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
-  .hashlbl{min-width:130px;font-weight:800;font-size:.82rem;color:var(--orange);text-transform:uppercase;letter-spacing:.06em}
-  code.hash{flex:1;min-width:260px;background:#0b0818;border:1px solid #2c2455;border-radius:10px;
-    padding:10px 12px;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.8rem;
-    color:var(--teal);word-break:break-all}
-  .copy{cursor:pointer;background:var(--purple);border:none;color:#fff;font-weight:800;
-    border-radius:10px;padding:10px 16px;font-size:.8rem;transition:filter .15s}
+  .hashlbl{min-width:130px;font-weight:800;font-size:.8rem;color:var(--coral);text-transform:uppercase;letter-spacing:.06em}
+  code.hash{flex:1;min-width:260px;background:#0b0616;border:1px solid #322457;border-radius:10px;padding:10px 12px;
+    font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.78rem;color:var(--teal);word-break:break-all}
+  .copy{cursor:pointer;background:var(--violet);border:none;color:#fff;font-weight:800;border-radius:10px;padding:10px 16px;font-size:.78rem;transition:filter .15s}
   .copy:hover{filter:brightness(1.2)}
   .pw{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-  .pw code{background:#0b0818;border:1px dashed var(--pink);border-radius:10px;padding:10px 16px;
-    font-family:ui-monospace,Menlo,monospace;color:#ffd9ea;letter-spacing:.12em;font-weight:700}
-  .cmd{margin-top:18px;background:#0b0818;border-left:3px solid var(--teal);border-radius:0 10px 10px 0;
-    padding:12px 16px;font-family:ui-monospace,Menlo,monospace;font-size:.85rem;color:#cbb8ff;overflow-x:auto}
-  .warn{margin-top:22px;border:1px solid rgba(255,154,61,.4);background:rgba(255,154,61,.07);
-    border-radius:12px;padding:16px 18px;font-size:.92rem;color:#ffcf9e}
-  .warn b{color:var(--orange)}
+  .pw code{background:#0b0616;border:1px dashed var(--pink);border-radius:10px;padding:10px 16px;font-family:ui-monospace,Menlo,monospace;color:#ffd9ea;letter-spacing:.12em;font-weight:700}
+  .cmd{margin-top:18px;background:#0b0616;border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:12px 16px;font-family:ui-monospace,Menlo,monospace;font-size:.83rem;color:#d9c8ff;overflow-x:auto}
+  .warn{margin-top:22px;border:1px solid rgba(255,142,107,.45);background:rgba(255,142,107,.08);border-radius:12px;padding:16px 18px;font-size:.9rem;color:#ffcf9e}
+  .warn b{color:var(--coral)}
 
-  /* ===== FAQ ===== */
-  details{background:var(--card);border:1px solid var(--line);border-radius:14px;
-    margin-bottom:12px;overflow:hidden}
-  summary{cursor:pointer;padding:18px 22px;font-weight:800;color:#fff;list-style:none;
-    display:flex;justify-content:space-between;align-items:center}
+  /* timeline + faq */
+  .tl{border-left:3px solid var(--violet);margin-left:8px;padding-left:26px;margin-top:30px}
+  .tl-item{position:relative;margin-bottom:24px}
+  .tl-item::before{content:'';position:absolute;left:-34.5px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--grad);box-shadow:0 0 12px rgba(255,77,141,.55)}
+  .tl-date{font-size:.74rem;font-weight:800;letter-spacing:.16em;color:var(--teal);text-transform:uppercase}
+  .tl-item h3{font-size:1.02rem;margin:4px 0}
+  .tl-item p{color:var(--dim);font-size:.9rem}
+  details{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  summary{cursor:pointer;padding:17px 22px;font-weight:800;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
   summary::-webkit-details-marker{display:none}
   summary::after{content:'+';font-size:1.4rem;color:var(--pink);transition:transform .2s}
   details[open] summary::after{transform:rotate(45deg)}
-  details .body{padding:0 22px 20px;color:var(--dim);font-size:.95rem}
+  details .body{padding:0 22px 20px;color:var(--dim);font-size:.92rem}
   details .body b{color:#ffd9ea}
 
-  /* ===== TIMELINE ===== */
-  .tl{border-left:3px solid var(--purple);margin-left:8px;padding-left:26px}
-  .tl-item{position:relative;margin-bottom:26px}
-  .tl-item::before{content:'';position:absolute;left:-34.5px;top:6px;width:14px;height:14px;
-    border-radius:50%;background:var(--grad);box-shadow:0 0 12px rgba(255,62,138,.6)}
-  .tl-date{font-size:.78rem;font-weight:800;letter-spacing:.15em;color:var(--teal);text-transform:uppercase}
-  .tl-item h3{font-size:1.05rem;margin:4px 0}
-  .tl-item p{color:var(--dim);font-size:.92rem}
-
-  /* ===== LINKS + FOOTER ===== */
-  .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-  .ext{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
-    padding:18px 20px;text-decoration:none;transition:border-color .15s,transform .15s}
+  /* sources + footer */
+  .linkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px}
+  .ext{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;transition:border-color .15s,transform .15s}
   .ext:hover{border-color:var(--pink);transform:translateY(-2px)}
-  .ext b{color:#fff;display:block;font-size:.98rem}
-  .ext span{color:var(--dim);font-size:.82rem;word-break:break-all}
-  footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 20px 50px;text-align:center;
-    color:var(--dim);font-size:.82rem}
+  .ext b{color:#fff;display:block;font-size:.95rem}
+  .ext span{color:var(--dim);font-size:.8rem;word-break:break-all}
+  footer{margin-top:90px;border-top:1px solid var(--line);padding:34px 22px 54px;text-align:center;color:var(--dim);font-size:.8rem}
   footer b{color:#ffd9ea}
-  .disc{max-width:640px;margin:10px auto 0;line-height:1.7}
+  .disc{max-width:660px;margin:10px auto 0;line-height:1.7}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <svg class="palm left" width="220" height="260" viewBox="0 0 220 260" fill="none">
-    <path d="M110 260 V120" stroke="#120d2b" stroke-width="10"/>
-    <path d="M110 130 Q60 90 15 105 Q70 70 108 112 M110 130 Q160 90 205 105 Q150 70 112 112
-             M110 118 Q80 60 40 55 Q95 45 110 105 M110 118 Q140 60 180 55 Q125 45 110 105
-             M110 112 Q110 55 90 25 Q125 50 112 105" stroke="#120d2b" stroke-width="9" fill="none" stroke-linecap="round"/>
-  </svg>
-  <svg class="palm right" width="220" height="260" viewBox="0 0 220 260" fill="none">
-    <path d="M110 260 V120" stroke="#120d2b" stroke-width="10"/>
-    <path d="M110 130 Q60 90 15 105 Q70 70 108 112 M110 130 Q160 90 205 105 Q150 70 112 112
-             M110 118 Q80 60 40 55 Q95 45 110 105 M110 118 Q140 60 180 55 Q125 45 110 105
-             M110 112 Q110 55 90 25 Q125 50 112 105" stroke="#120d2b" stroke-width="9" fill="none" stroke-linecap="round"/>
-  </svg>
-  <div class="kicker">🔒 Community Leak Archive</div>
-  <div class="bigvi">VI</div>
-  <h1>Grand Theft Auto VI × Cyberleek</h1>
-  <p class="sub">The decrypted Xbox Series X build 1.0.2.1 and its missing executable — free, with the official
-     SHA-256 hashes so you don't catch infostealer from one of the 355+ fake sites.</p>
-  <div class="released"><span class="dotpulse"></span> EXE RELEASED — NOV 23, 2026 · "XMAS CAME EARLY" · ALWAYS FREE</div>
+<nav>
+  <a class="brand" href="#top">🌴 GRAND<i>FROST</i>AUTO</a>
+  <div class="links">
+    <a href="#launch">Launch</a>
+    <a href="#editions">Editions</a>
+    <a href="#world">Leonida</a>
+    <a href="#archive">Leak Archive</a>
+    <a href="#verify">Verify</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="Vice City sunset"></div>
+  <div class="outnow">Out Now · November 19, 2026</div>
+  <div class="wordmark">
+    <div class="gta">Grand Theft Auto</div>
+    <div class="six">VI</div>
+  </div>
+  <p class="tagline">Welcome back to Vice City. Welcome to Leonida.</p>
+  <div class="plats">
+    <div class="plat">PlayStation 5<small>$79.99 STANDARD</small></div>
+    <div class="plat">Xbox Series X|S<small>$79.99 STANDARD</small></div>
+    <div class="plat">PC<small style="color:var(--coral)">NOT ANNOUNCED</small></div>
+  </div>
+  <div class="herocta">
+    <a class="btn gold" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Official Site ↗</a>
+    <a class="btn line" href="#archive">Community Leak Archive ↓</a>
+  </div>
+  <div class="scroll-hint">Scroll</div>
 </header>
 
 <main>
 
-  <!-- ===== DOWNLOADS ===== -->
-  <section id="downloads">
-    <h2 class="sec">⬇️ The Downloads</h2>
-    <p class="sec-sub">Everything Cyberleek released. No paywalls, no token gates — the countdown hit zero early.</p>
-    <div class="cards">
+  <!-- LAUNCH -->
+  <section id="launch">
+    <div class="sec-kicker">The Launch</div>
+    <h2 class="sec">The biggest launch in <em>entertainment history</em></h2>
+    <p class="sec-sub">After thirteen years, Rockstar returned to Vice City on November 19, 2026.
+       Two protagonists, one state built on excess — and within hours, the story stopped being just about the game.</p>
+    <div class="world">
+      <div class="wcard"><div class="big">NOV 19</div><h3>Launch day</h3><p>PS5 &amp; Xbox Series X|S worldwide. No PC version announced — Rockstar's console-first pattern continues.</p></div>
+      <div class="wcard"><div class="big">13 YRS</div><h3>Since GTA V</h3><p>The longest gap between mainline entries in series history — and the most anticipated release ever.</p></div>
+      <div class="wcard"><div class="big">HOURS</div><h3>Until the leak</h3><p>Same day: an anonymous leaker called Cyberleek published a decrypted Xbox build. By Nov 23 the full executable was free.</p></div>
+    </div>
+  </section>
 
+  <!-- EDITIONS -->
+  <section id="editions">
+    <div class="sec-kicker">Buy The Game</div>
+    <h2 class="sec">Editions &amp; <em>pricing</em></h2>
+    <p class="sec-sub">Straight from the launch lineup. Buy from your platform's store or Rockstar — never from "leak" sites selling keys.</p>
+    <div class="editions">
+      <div class="ed">
+        <h3>Standard Edition</h3>
+        <div class="price">$79.99 <small>USD</small></div>
+        <ul>
+          <li><b>Full story</b> — Jason &amp; Lucia across Leonida</li>
+          <li>Vice City, the Keys, the Everglades and beyond</li>
+          <li>Online component at launch</li>
+          <li>PS5 / Xbox Series X|S</li>
+        </ul>
+      </div>
+      <div class="ed ult">
+        <span class="flag">DELUXE</span>
+        <h3>Ultimate Edition</h3>
+        <div class="price">$99.99 <small>USD</small></div>
+        <ul>
+          <li><b>Everything in Standard</b></li>
+          <li>Exclusive vehicles &amp; weapons</li>
+          <li>Additional properties &amp; businesses</li>
+          <li>Bonus story content &amp; cosmetics</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">⚠️ Any site selling a "GTA 6 PC edition" or one-click PC launcher is a scam — 355+ fake domains have been catalogued pushing infostealers. Official purchase: your console's store or <a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">rockstargames.com</a>.</p>
+  </section>
+
+  <!-- WORLD -->
+  <section id="world">
+    <div class="sec-kicker">The State of Leonida</div>
+    <h2 class="sec">Vice City, <em>reborn</em></h2>
+    <p class="sec-sub">Neon-soaked streets, swamp airboats, Keys sunsets — Rockstar's take on modern Florida, denser and stranger than anything they've built.</p>
+    <div class="world">
+      <div class="wcard"><div class="big">VICE CITY</div><h3>The neon heart</h3><p>Beachfront excess, nightlife, and the criminal underworld that comes with both.</p></div>
+      <div class="wcard"><div class="big">THE KEYS</div><h3>Island chain</h3><p>Boats, bridges and smuggling routes stretching into open water.</p></div>
+      <div class="wcard"><div class="big">GRASSRIVERS</div><h3>The Everglades</h3><p>Airboats, gators, and swamp country hiding its own economy.</p></div>
+      <div class="wcard"><div class="big">2 LEADS</div><h3>Jason &amp; Lucia</h3><p>The series' first playable female protagonist — a couple pulled deeper than they planned.</p></div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY DIVIDER -->
+  <div class="community-banner" id="archive">
+    <span class="tag">Community Section · Not Official</span>
+    <h2>The Cyberleek Leak Archive</h2>
+    <p>Everything below is the <b>community leak archive</b>: the decrypted Xbox Series X build 1.0.2.1 and its
+       executable, released free by Cyberleek between Nov 19–23, 2026. Kept here for archival and the open-source
+       recomp projects — <b>with official SHA-256 hashes so you don't catch infostealer from a fake.</b></p>
+  </div>
+
+  <!-- DOWNLOADS -->
+  <section>
+    <div class="sec-kicker">Free · No Paywall</div>
+    <h2 class="sec">The <em>downloads</em></h2>
+    <div class="cards">
       <div class="card">
         <span class="sizetag">ZIP · small</span>
         <div class="tag">The Missing Piece</div>
         <h3>GTA 6 — EXE Build 1.0.2.1</h3>
-        <p>The main executable for the Xbox build, withheld on a countdown since Nov 19 and dropped free
-           on Nov 23. Xbox Series X binary — <b style="color:#ffcf9e">not</b> double-clickable on PC (see FAQ).</p>
-        <a class="btn primary" href="https://filevault.cybar.to/file/31" target="_blank" rel="noopener">🛒 Download EXE (.zip)</a>
-        <a class="btn ghost" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener">Mirror tracker (GameDrive)</a>
+        <p>The main executable, withheld behind a countdown since Nov 19 and dropped free on Nov 23 —
+           "XMAS CAME EARLY. Always free." Xbox Series X binary, <b style="color:#ffcf9e">not</b> double-clickable on PC.</p>
+        <a class="btn gold block" href="https://filevault.cybar.to/file/31" target="_blank" rel="noopener">⬇ Download EXE (.zip)</a>
+        <a class="btn ghost block" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener">Mirror tracker (GameDrive)</a>
       </div>
-
       <div class="card">
         <span class="sizetag">~209 GB · torrent</span>
-        <div class="tag">The Whole Game</div>
+        <div class="tag">The Whole Build</div>
         <h3>Xbox Build 1.0.2.1 — Assets</h3>
-        <p>The decrypted November 2026 Xbox Series X|S build: assets, shaders, everything — released Nov 19
-           via torrent. Add the EXE above and you have the complete build for archival/recomp.</p>
-        <a class="btn primary" href="magnet:?xt=urn:btih:465d6a0eac381e68ca77115f44f19f0c968b9590&tr=udp://open.tracker.cl:1337/announce">🧲 Magnet Link</a>
-        <a class="btn ghost" href="#verify">Verify before extracting ⚠️</a>
+        <p>The decrypted November 2026 Xbox Series X|S build: assets, shaders, everything — released Nov 19 via torrent.
+           Add the EXE and you have the complete build for archival / recomp work.</p>
+        <a class="btn gold block" href="magnet:?xt=urn:btih:465d6a0eac381e68ca77115f44f19f0c968b9590&tr=udp://open.tracker.cl:1337/announce">🧲 Magnet Link</a>
+        <a class="btn ghost block" href="#verify">Verify before extracting ⚠️</a>
       </div>
-
     </div>
-  </section>
 
-  <!-- ===== VERIFY ===== -->
-  <section id="verify">
-    <h2 class="sec">🛡️ Verify Before You Trust</h2>
-    <p class="sec-sub">Cyberleek published official hashes because fakes are everywhere. If your file doesn't match
-       character-for-character, <b style="color:#ffcf9e">do not extract it.</b></p>
-    <div class="vbox">
+    <!-- VERIFY -->
+    <div class="vbox" id="verify">
+      <div class="sec-kicker">Trust Anchor</div>
+      <h2 class="sec" style="font-size:1.6rem">Verify before you <em>trust</em></h2>
+      <p class="sec-sub" style="margin-bottom:8px">Cyberleek published official hashes because fakes are everywhere.
+         No match, character-for-character? <b style="color:#ffcf9e">Do not extract it.</b></p>
       <div class="hashrow">
         <span class="hashlbl">ZIP SHA-256</span>
         <code class="hash" id="h1">7545a2f7fb4b399cf8850987f087ed9a4d8499ddb6d6c2d642fd60c27f569730</code>
@@ -200,99 +322,102 @@
         <button class="copy" onclick="cp('h3',this)">Copy</button>
       </div>
       <div class="cmd">macOS / Linux&nbsp;&nbsp;shasum -a 256 &lt;file.zip&gt;<br>Windows&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;certutil -hashfile &lt;file.zip&gt; SHA256</div>
-      <div class="warn">⚠️ <b>355+ fake domains</b> are pushing fake "GTA 6 PC launchers" loaded with infostealers.
-        Rockstar has shipped <b>no PC version</b> — any site offering a one-click PC play of GTA 6 right now is a trap.</div>
+      <div class="warn">⚠️ <b>355+ fake domains</b> push fake "GTA 6 PC launchers" loaded with infostealers.
+        Rockstar has shipped <b>no PC version</b> — any one-click PC play offer right now is a trap.</div>
     </div>
   </section>
 
-  <!-- ===== TIMELINE ===== -->
-  <section id="timeline">
-    <h2 class="sec">🗓️ How It Went Down</h2>
-    <p class="sec-sub">The shortest version of the messiest leak saga in gaming.</p>
+  <!-- TIMELINE -->
+  <section>
+    <div class="sec-kicker">Nov 19 → 23, 2026</div>
+    <h2 class="sec">How it <em>went down</em></h2>
     <div class="tl">
       <div class="tl-item">
-        <div class="tl-date">Nov 19, 2026</div>
-        <h3>GTA VI launches</h3>
-        <p>Grand Theft Auto VI releases on PS5 and Xbox Series X|S — Standard $79.99 / Ultimate $100. No PC version announced.</p>
+        <div class="tl-date">Nov 19 · Launch</div>
+        <h3>GTA VI releases</h3>
+        <p>PS5 / Xbox Series X|S worldwide — Standard $79.99, Ultimate $99.99. No PC version announced.</p>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Nov 19, 2026 · later</div>
+        <div class="tl-date">Nov 19 · Hours later</div>
         <h3>Cyberleek drops the build</h3>
-        <p>A decrypted ~209 GB Xbox Series X build 1.0.2.1 hits torrent networks — minus one file: the main executable, held behind a countdown and a CYBERLEEK token market-cap goal.</p>
+        <p>A decrypted ~209 GB Xbox Series X build 1.0.2.1 hits torrent networks — minus the main executable, held behind a countdown.</p>
       </div>
       <div class="tl-item">
-        <div class="tl-date">Nov 23, 2026 · ~20:06</div>
+        <div class="tl-date">Nov 23 · ~20:06</div>
         <h3>"XMAS CAME EARLY"</h3>
-        <p>The EXE drops ~3 hours ahead of the timer. "The exe is out. Always free. An early Christmas gift from CL.
-           The torch passes to the open source recomp and emulation projects. Before trusting any file, verify it."</p>
+        <p>The EXE drops ~3 hours ahead of the timer, free, with official SHA-256 checksums. "The torch passes to the open source recomp and emulation projects."</p>
       </div>
       <div class="tl-item">
         <div class="tl-date">Now</div>
         <h3>The recomp era</h3>
-        <p>Leonida, Xbox2Windows, AnyXboxX and other open-source projects race to get the Xbox build running on PC via static recompilation.</p>
+        <p>Leonida, Xbox2Windows, AnyXboxX and other open-source projects race toward a native PC port via static recompilation.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section id="faq">
-    <h2 class="sec">❓ FAQ</h2>
+  <!-- FAQ -->
+  <section>
+    <div class="sec-kicker">Straight Answers</div>
+    <h2 class="sec">FAQ</h2>
+    <div style="margin-top:26px">
     <details>
-      <summary>Can I play GTA 6 on PC with this?</summary>
+      <summary>Can I play GTA 6 on PC with the leaked files?</summary>
       <div class="body"><b>Not yet.</b> The EXE is an Xbox Series X binary — Windows doesn't speak its system calls.
-        Dropping it into the 209 GB asset folder does nothing. Open-source recomp projects (Leonida etc.) are working on a
-        native PC port; a working recomp is expected to need <b>350 GB+</b> of drive space. Watch gta6recomp.com for progress.</div>
+        Dropping it into the 209 GB asset folder does nothing. Open-source recomp projects are working on a native PC port;
+        watch gta6recomp.com for progress.</div>
     </details>
     <details>
-      <summary>What exactly do I get?</summary>
-      <div class="body">The ~209 GB torrent is the decrypted Xbox build's assets (Nov 2026, v1.0.2.1). The small ZIP contains
-        the main executable that was missing from it. Together: the complete console build, for archival and reverse-engineering.</div>
+      <summary>What exactly do the downloads contain?</summary>
+      <div class="body">The ~209 GB torrent is the decrypted Xbox build's assets (Nov 2026, v1.0.2.1). The small ZIP is the
+        main executable missing from it. Together: the complete console build, for archival and reverse-engineering.</div>
     </details>
     <details>
       <summary>Is it safe to download?</summary>
-      <div class="body">Only if the <b>hashes match</b> — that's exactly why Cyberleek published them. Verify the ZIP SHA-256
-        before extracting, and the EXE SHA-256 after. Fake sites and Discord/Telegram "launchers" are the real danger.</div>
+      <div class="body">Only if the <b>hashes match</b> — that's why Cyberleek published them. Verify the ZIP SHA-256 before
+        extracting and the EXE SHA-256 after. Fake sites and Discord/Telegram "launchers" are the real danger.</div>
     </details>
     <details>
       <summary>Who is Cyberleek?</summary>
-      <div class="body">An anonymous leaker who's been dribbling GTA VI material since before launch. All releases are free;
-        they take crypto donations (BTC/XMR) and shill a CYBERLEEK token. Official site: <b>cyberleek.org</b>.</div>
+      <div class="body">An anonymous leaker dribbling GTA VI material since before launch. All releases free; takes crypto
+        donations. Official site: <b>cyberleek.org</b>.</div>
     </details>
     <details>
-      <summary>Is this "official"?</summary>
-      <div class="body">Official GTA 6 = Rockstar Games, PS5 / Xbox Series X|S only. This is a leaked console build and this
-        page is a fan-made community archive — not affiliated with Rockstar or Cyberleek.</div>
+      <summary>Is this site official?</summary>
+      <div class="body"><b>No.</b> Official GTA 6 = Rockstar Games, PS5 / Xbox Series X|S. GrandFrostAuto is a fan-made
+        community page — not affiliated with Rockstar, Take-Two, or Cyberleek.</div>
     </details>
+    </div>
   </section>
 
-  <!-- ===== LINKS ===== -->
-  <section id="links">
-    <h2 class="sec">🔗 Sources & Tracking</h2>
-    <p class="sec-sub">Where this all lives if you want to go deeper.</p>
+  <!-- SOURCES -->
+  <section>
+    <div class="sec-kicker">Go Deeper</div>
+    <h2 class="sec">Sources &amp; <em>tracking</em></h2>
     <div class="linkgrid">
-      <a class="ext" href="https://cyberleek.org/" target="_blank" rel="noopener"><b>Cyberleek — official site</b><span>cyberleek.org — announcements, leeks, donations</span></a>
+      <a class="ext" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener"><b>Rockstar — official GTA VI</b><span>rockstargames.com/VI — the real launch</span></a>
+      <a class="ext" href="https://cyberleek.org/" target="_blank" rel="noopener"><b>Cyberleek — official site</b><span>cyberleek.org — announcements &amp; leeks</span></a>
       <a class="ext" href="https://gta6recomp.com/post/cyberleek-releases-gta6-xbox-exe" target="_blank" rel="noopener"><b>GTA6 Recomp — EXE drop post</b><span>official hashes + verification guide</span></a>
-      <a class="ext" href="https://gta6recomp.com/" target="_blank" rel="noopener"><b>GTA6 Recomp project</b><span>open-source PC recomp hub (Leonida etc.)</span></a>
       <a class="ext" href="https://gamedrive.org/grand-theft-auto-vi-gta-6-cyberleek-leaks/" target="_blank" rel="noopener"><b>GameDrive leak tracker</b><span>mirrors, manifests, community archive</span></a>
     </div>
   </section>
 
-  <footer>
-    <div><b>GRANDFROSTAUTO</b> · GTA VI × Cyberleek community archive · updated Nov 23, 2026</div>
-    <p class="disc">Fan-made page for friends, not affiliated with or endorsed by Rockstar Games, Take-Two, or Cyberleek.
-       Grand Theft Auto VI © Rockstar Games. Verify every file before you run it. Stay leeky. 🥒</p>
-  </footer>
-
 </main>
+
+<footer>
+  <div><b>GRANDFROSTAUTO</b> · GTA VI launch hub &amp; community archive · updated Nov 23, 2026</div>
+  <p class="disc">Fan-made page, not affiliated with or endorsed by Rockstar Games, Take-Two Interactive, or Cyberleek.
+     Grand Theft Auto VI © Rockstar Games. All key art on this page is original fan artwork. Verify every file before you
+     run it. Stay leeky. 🥒🌴</p>
+</footer>
 
 <script>
 function cp(id, btn){
   const txt = document.getElementById(id).textContent.trim();
-  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject())
-    .then(()=>{ const o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(()=>btn.textContent=o,1400); })
-    .catch(()=>{ const r=document.createRange(); r.selectNode(document.getElementById(id));
-      getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy');
-      const o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(()=>btn.textContent=o,1400); });
+  const done = () => { const o=btn.textContent; btn.textContent='✓ Copied'; setTimeout(()=>btn.textContent=o,1400); };
+  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(done).catch(()=>{
+    const r=document.createRange(); r.selectNode(document.getElementById(id));
+    getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy'); done();
+  });
 }
 </script>
 </body>
