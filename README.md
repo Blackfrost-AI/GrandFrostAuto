@@ -1,8 +1,12 @@
 # GrandFrostAuto 🌴❄️
 
-**The Piracy Trap** — a fan-made community threat report on the 355+ fake GTA VI download sites hunting for victims during launch week: how piracy draws infostealer/ransomware operators, the kill chain, red flags, and full disclosure of the real Cyberleek download links + published SHA-256 hashes as verification anchors against malware. No pricing; not a storefront.
+**The Piracy Trap** — a fan-made community threat report on the 355+ fake GTA VI download sites hunting for victims during launch week: how piracy draws infostealer/ransomware operators, the kill chain, red flags, and Cyberleek's published SHA-256 hashes disclosed as verification anchors against malware. No pricing; not a storefront.
 
 **Live:** https://blackfrost-ai.github.io/GrandFrostAuto/
+
+## Update — links taken down (Nov 25, 2026)
+
+The EXE mirror previously disclosed here was **hijacked** (the file it serves no longer matches Cyberleek's published hash), and **Rockstar has blocked the torrent magnet**. Both download links were removed from the article on sight. The published hashes remain as verification anchors — any copy that doesn't match them, character-for-character, is not the genuine release.
 
 ## Files
 
@@ -14,4 +18,4 @@
 
 The previous launch-hub design lives in git history (commit `eb59452` and earlier).
 
-Not affiliated with Rockstar Games, Take-Two, or Cyberleek. All key art is original fan artwork. Links are disclosed for verification and harm-reduction.
+Not affiliated with Rockstar Games, Take-Two, or Cyberleek. All key art is original fan artwork. Hashes are disclosed for verification and harm-reduction.
